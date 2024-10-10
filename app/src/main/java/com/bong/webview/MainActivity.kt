@@ -1,5 +1,6 @@
 package com.bong.webview
 
+import android.graphics.Color
 import android.os.Bundle
 import android.webkit.WebChromeClient
 import android.webkit.WebView
@@ -26,12 +27,13 @@ class MainActivity : AppCompatActivity() {
 
         myWebView.webViewClient = WebViewClient()
         myWebView.webChromeClient = WebChromeClient()
-        myWebView.loadUrl("https://sparklemall.co.kr")
+        myWebView.loadUrl("http://sparkle.itcuve.com")
 
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-//            insets
-//        }
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(0, systemBars.top, 0, systemBars.bottom)
+            v.setBackgroundColor(Color.WHITE)
+            insets
+        }
     }
 }

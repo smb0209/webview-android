@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.Webview" parent="Base.Theme.Webview" />
+
+    <style name="SparkleTheme" parent="Theme.Design.Light.NoActionBar">
+<!--        <item name="android:windowFullscreen">true</item>-->
+
+
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
 </resources>
